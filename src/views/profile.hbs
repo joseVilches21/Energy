@@ -1,0 +1,39 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>Bienvenido {{user.first_name}}</h3>
+
+                    <img src="" alt="">
+
+                    <p> <b>Usuario:</b> <span>{{user.username}}</span></p>
+                    <p> <b>Nombres:</b> <span>{{user.first_name}}</span></p>
+                    <p> <b>Apellidos:</b> <span>{{user.last_name}}</span></p>
+                    <p> <b>E-mail:</b> <span>{{user.email}}</span></p>
+                    <p> <b>Teléfono:</b> <span>{{user.phone}}</span></p>
+
+                    <!--a href="/tours" class="btn btn-primary m-4">
+                        Ver    
+                    </!--a-->
+
+                    <a href="/editprofile" class="btn btn-primary m-4">
+                        Editar
+                    </a>
+
+                    <a href="/admin/users" class="btn btn-primary m-4">
+                        Ver Usuarios
+                    </a>
+
+
+                    <!--a href="/profile/deleteprofile/{{user.id}}"  class="btn btn-danger">
+                        Eliminar
+                    </!--a-->
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

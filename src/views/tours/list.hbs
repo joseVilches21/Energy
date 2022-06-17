@@ -1,0 +1,90 @@
+<div class="container p-4">
+    <h3>Mis Recorridos:</h3> <br>
+    <table class="table table-striped table-bordered" style="color:aliceblue">
+        <thead style="background-color:#000">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Método</th>
+                <th scope="col">Promedio Km</th>
+                <th scope="col">Link</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        {{#each tours}}
+        <tbody>
+            <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{type_tour}}</td>
+                <td>{{average_tour}} km</td>
+
+                <!--td> <a href={{link}} target="_blank">
+                        <p class="card-title text-uppercase">
+                            ¡Ingresa aquí!
+                        </p>
+                    </a></!--td-->
+
+                <td>{{link}}</td>
+
+                <td><a class="btn btn-secondary" href="/tours/edit/{{id}}">
+                        Editar
+                    </a></td>
+                    
+                <td> <a class="btn btn-danger" href="/tours/delete/{{id}}">
+                        Borrar
+                    </a></td>
+            </tr>
+        </tbody>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay recorridos creados.</p>
+                <a href="/tours/add">¡Crea uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </table>
+
+    <a class="btn btn-secondary" href="/tours/add">
+        Agregar
+    </a>
+</div>
+
+<!--div class="container p-4">
+    <div class="row">
+        <h3>Mis Recorridos:</h3> <br> <br><br>
+        {{#each tours}}
+        <div class="col-md-3">
+
+            <div class="card text-center" style="border: 2px solid rgba(27,69,87,1)">
+                <div class="card-body">
+                    <a href={{link}} target="_blank">
+                        <h3 class="card-title text-uppercase">
+                            {{type_tour}}
+                        </h3>
+                    </a>
+                    <p class="m-2">{{average_tour}} km</p>
+                    <p class="text-muted" time="{{created_at}}">
+                        {{ created_at }}
+                    </p>
+                    <a class="btn btn-danger" href="/tours/delete/{{id}}">
+                        Borrar
+                    </a>
+                    <a class="btn btn-secondary" href="/tours/edit/{{id}}">
+                        Editar
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay recorridos creados.</p>
+                <a href="/tours/add">¡Crea uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</!--div-->

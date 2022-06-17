@@ -1,0 +1,33 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <h3 style="text-align: center">Formulario de registro de recorrido</h3>
+            <p style="text-align: center">Rellene todos los campos, por favor.</p>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/tours/add" method="POST">
+                        <div class="form-group">
+                            <p>¿Qué método de registro de recorrido utilizas? ¿Aplicación o personal? Si es aplicación ingrese el nombre</p>
+                            <input type="text" name="type_tour" class="form-control" placeholder="Método" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <p style="margin-top: 20px"> ¿Cuánto es el promedio diario de Km que recorres actualmente?</p>
+                            <input type="text"name="average_tour" rows="2" class="form-control" placeholder="Promedio Km"></input>
+                        </div>
+                        <div class="form-group">
+                            <p style="margin-top: 20px">Copia y pega el enlace de tu recorrido si utilizas una aplicación</p>
+                            <input type="url" name="link" class="form-control" placeholder="URL">
+                        </div>
+                        
+                        <div class="form-group" >
+                            <button class="btn btn-success btn-block" style="margin-top: 20px">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

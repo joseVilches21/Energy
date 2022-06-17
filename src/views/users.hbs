@@ -1,0 +1,58 @@
+<div class="container p-4">
+    <h3>Usuarios:</h3> <br>
+    <table class="table table-striped table-bordered" style="color:aliceblue">
+        <thead style="background-color:#000">
+            <tr style="font-size:14px">
+                <th scope="col">ID</th>
+                <th scope="col">Usernamne</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Create_at</th>
+                <th scope="col">Password</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        {{#each users}}
+        <tbody>
+            <tr style="font-size:11px">
+                <th scope="row">{{id}}</th>
+                <th scope="row">{{username}}</th>
+                <th scope="row">{{first_name}}</th>
+                <th scope="row">{{last_name}}</th>
+                <th scope="row">{{email}}</th>
+                <th scope="row">{{phone}}</th>
+                <th scope="row">{{created_at}}</th>
+                <th scope="row">{{password}}</th>
+
+                
+                <!--td> <a class="btn btn-primary" href="/admin/users/tours">
+                        Rutas
+                    </a></!--td-->
+
+
+                <td><a class="btn btn-secondary" href="/editprofileforadmin/{{id}}">
+                        Editar
+                    </a></td>
+
+                <td> <a class="btn btn-danger" href="/deleteprofileforadmin/{{id}}">
+                        Borrar
+                    </a></td>
+            </tr>
+        </tbody>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay usuarios creados.</p>
+                <a href="/signupadmin">¡Crea uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </table>
+
+    <a class="btn btn-secondary" href="/signupadmin">
+        Agregar
+    </a>
+</div>

@@ -1,0 +1,57 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center" style="margin-top: 35px">
+                <div class="card-header">
+                    <h3>Editar perfil</h3>
+                    <img src="https://previews.123rf.com/images/grgroup/grgroup1611/grgroup161113006/66712813-pictograma-y-el-icono-de-la-bici-personas-afici%C3%B3n-deportiva-persona-y-el-tema-humano-dise%C3%B1o-aislado-.jpg"
+                        height="100px" width="100px">
+                </div>
+                <div class="card-body">
+                    <form action="/editprofile/{{user.id}}" method="POST">
+
+                        <!--div class="form-group">
+                            <input type="text" name="username" placeholder="Username" class="form-control" value autofocus>
+                        </div-->
+
+                        <label style="margin-top: 20px; text-align:left">Nombre:</label>
+                        <div class="form-group" style="margin-top: 20px">
+                            <input type="type" name="first_name" placeholder="Nombre" class="form-control" value="{{user.first_name}}" autofocus>
+                        </div>
+
+                        <label style="margin-top: 20px">Apellido:</label>
+                        <div class="form-group" style="margin-top: 20px">
+                            <input type="type" name="last_name" placeholder="Apellido" class="form-control" value="{{user.last_name}}" autofocus>
+                        </div>
+
+                        <label style="margin-top: 20px">Email:</label>
+                        <div class="form-group" style="margin-top: 20px">
+                            <input type="email" name="email" placeholder="Email" class="form-control" value="{{user.email}}">
+                        </div>
+
+                        <label style="margin-top: 20px">Teléfono:</label>
+                        <div class="form-group" style="margin-top: 20px">
+                            <input type="tel" name="phone" placeholder="Teléfono" class="form-control" value="{{user.phone}}">
+                        </div>
+
+                        <label style="margin-top: 20px">Cambiar contraseña:</label>
+
+                        <div class="form-group" style="margin-top: 20px">
+                            <input type="password" name="password" placeholder="Password" class="form-control">
+                        </div>
+
+                        <!--div class="form-group" style="margin-top: 20px">
+                            <input type="password" name="new_password" placeholder="New Password" class="form-control">
+                        </!--div-->
+
+                        <div class="form-group" style="margin-top: 20px">
+                            <button class="btn btn-success btn-block">
+                                Actualizar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
